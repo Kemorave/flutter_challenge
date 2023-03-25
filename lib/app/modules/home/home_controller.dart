@@ -44,6 +44,7 @@ class HomeController extends GetxController with ApiCallMixin {
             title: "registered", content: Text(res.bodyString ?? 'body null'));
       }
     } catch (e) {
+      print(e);
     } finally {
       isBusy.value = false;
     }

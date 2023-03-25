@@ -3,22 +3,19 @@ import 'dart:async';
 import 'package:flutter_application_1/locator.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
-import 'package:get/get_connect/http/src/status/http_status.dart';
 import 'package:mutex/mutex.dart';
 
 import '../dto/refreshTokenDTO.dart';
 
-class BaseRepository extends GetConnect {
-  late GetConnect client = this;
+class BaseRepository {
+  late GetConnect client = GetConnect(withCredentials: true);
   static final _lockMutex = Mutex();
-  BaseRepository({required String apiUrl}) : super(withCredentials: true) {
+  BaseRepository({required String apiUrl}) {
     client.baseUrl = apiUrl;
     onInit();
   }
 
-  @override
   void onInit() {
-    super.onInit();
     client.httpClient.addRequestModifier<dynamic>(_attachHeaders);
     client.httpClient.addAuthenticator<dynamic>(_refreshToken);
   }
@@ -45,9 +42,10 @@ class BaseRepository extends GetConnect {
   }
 
   FutureOr<Request> _attachHeaders(Request request) async {
-    if (await userService().isLogedIn())
+    if (await userService().isLogedIn()) {
       request.headers["x-access-token"] =
           "${await userService().getAccessToken()}";
+    }
     return request;
   }
 }

@@ -4,8 +4,12 @@ import 'package:get/get.dart';
 
 import 'app/core/bindings/application_bindings.dart';
 import 'app/routes/app_pages.dart';
-import 'localizations_delegate.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+// ignore: depend_on_referenced_packages
+import 'package:flutter_localizations/flutter_localizations.dart'
+    show
+        GlobalCupertinoLocalizations,
+        GlobalMaterialLocalizations,
+        GlobalWidgetsLocalizations;
 
 Future<GetMaterialApp> getApp() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +22,7 @@ Future<GetMaterialApp> getApp() async {
     initialBinding: ApplicationBindings(),
     initialRoute: AppPages.INITIAL,
     getPages: AppPages.routes,
-    supportedLocales: [Locale('en'), Locale('ar')],
+    supportedLocales: [const Locale('en'), const Locale('ar')],
     locale: Locale(await language().getCurrentLocal()),
     fallbackLocale: const Locale('en'),
     localizationsDelegates: [
