@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 
-part 'addressDTO.freezed.dart';
-part 'addressDTO.g.dart';
+part 'address_dto.freezed.dart';
+part 'address_dto.g.dart';
 
 @freezed
 class AddressDTO   with _$AddressDTO {

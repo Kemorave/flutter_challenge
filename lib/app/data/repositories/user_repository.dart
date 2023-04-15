@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../dto/loginResponceDTO.dart';
+import '../dto/login_responce_dto.dart';
 import 'base_repository.dart';
 
 class UserRepository extends BaseRepository {

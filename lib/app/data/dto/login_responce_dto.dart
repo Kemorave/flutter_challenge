@@ -1,8 +1,8 @@
-import 'userDTO.dart';
+import 'user_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart' ;
 
-part 'loginResponceDTO.freezed.dart';
-part 'loginResponceDTO.g.dart';
+part 'login_responce_dto.freezed.dart';
+part 'login_responce_dto.g.dart';
 
 @freezed
 class LoginResponceDTO with _$LoginResponceDTO {

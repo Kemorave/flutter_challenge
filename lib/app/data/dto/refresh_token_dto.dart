@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'refreshTokenDTO.freezed.dart';
-part 'refreshTokenDTO.g.dart';
+part 'refresh_token_dto.freezed.dart';
+part 'refresh_token_dto.g.dart';
 
 @freezed
 class RefreshTokenDTO with _$RefreshTokenDTO {

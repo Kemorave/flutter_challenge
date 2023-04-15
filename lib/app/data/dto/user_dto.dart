@@ -2,10 +2,10 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'addressDTO.dart';
+import 'address_dto.dart';
 
-part 'userDTO.freezed.dart';
-part 'userDTO.g.dart';
+part 'user_dto.freezed.dart';
+part 'user_dto.g.dart';
 
 @freezed
 class UserDTO with _$UserDTO {

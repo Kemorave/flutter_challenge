@@ -3,8 +3,8 @@ import 'package:flutter_application_1/locator.dart';
 import 'package:flutter_application_1/app/core/services/api/local_data_service.dart';
 import 'package:get/get.dart';
 
-import '../../data/dto/loginResponceDTO.dart';
-import '../../data/dto/userDTO.dart';
+import '../../data/dto/login_responce_dto.dart';
+import '../../data/dto/user_dto.dart';
 import '../../data/model/user_model.dart';
 
 class UserDataService extends GetxService {
