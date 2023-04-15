@@ -34,11 +34,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_localization: ^0.1.10
+  flutter_screenutil: ^5.7.0
   flutter_secure_storage: ^8.0.0
   freezed: ^2.3.2
   freezed_annotation: ^2.2.0
   get: null
   get_it: ^7.2.0
+  google_fonts: ^4.0.3
   intl: null
   json_annotation: ^4.8.0
   mutex: ^3.0.1

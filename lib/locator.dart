@@ -5,6 +5,7 @@ import 'package:flutter_application_1/app/core/services/localization_service.dar
 import 'package:flutter_application_1/app/core/services/user_data_service.dart';
 import 'package:get_it/get_it.dart';
 
+import 'app/core/services/error_control_service.dart';
 import 'app/data/unit_of_work.dart';
 
 GetIt _locator = GetIt.I;
@@ -16,8 +17,10 @@ NavigationService navigation() => locate<NavigationService>();
 LocalDataService localStorage() => locate<LocalDataService>();
 UserDataService userService() => locate<UserDataService>();
 LocalizationService language() => locate<LocalizationService>();
+ErrorControlService errorControl() => locate<ErrorControlService>();
 void initLocator() {
   singleTone(LocalDataService());
+  singleTone(ErrorControlService());
   singleTone(LocalizationService());
   singleTone(NavigationService());
   singleTone(UserDataService());
